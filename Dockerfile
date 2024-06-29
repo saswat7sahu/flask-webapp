@@ -3,4 +3,4 @@ WORKDIR /app
 COPY . /app/
 RUN pip install -r recuirments.txt
 EXPOSE 3000
-CMD [ "python" "./app.py" ]
+CMD [ "python" "app.py" ]
