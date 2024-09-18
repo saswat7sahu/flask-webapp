@@ -14,7 +14,6 @@ pipeline {
                 script {
                     // Install dependencies
                     sh 'python3 -m venv venv'       // virtual environment
-                    sh 'pwd'
                     sh '. venv/bin/activate && pip install -r recuirments.txt'// Install dependencies from the requirements file
                 }
             }
@@ -24,7 +23,7 @@ pipeline {
             steps {
                 script {
                     // Run the unit tests using unittest
-                    sh '. venv/bin/activate && python -m unittest discover -s tests' // Assuming tests are in the 'tests' folder
+                    sh '. venv/bin/activate && python -m unittest discover -s tests' 
                 }
             }
         }
